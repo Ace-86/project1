@@ -5,9 +5,20 @@ import { Link } from 'react-router-dom';
 
 function NavBar() {
   const [click, setClick] = useState(false);
+  const [button, setButton] = useState(true);
 
   const handleClick = () => setClick(!click); 
   const closeMobileMenu = () => setClick(false);
+
+  const showButton = () => {
+    if(window.innerWidth <= 960) {
+      setButton(false);
+    } else {
+      setButton(true);
+    }
+  };
+// button changes when window is resized
+  window.addEventListener('resize', showButton);
 
   return (
     <>
@@ -19,7 +30,30 @@ function NavBar() {
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
           </div>
-         
+          {/* on click navbar will dissapear */}
+          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+            <li className='nav-item'>
+              <Link to='/' className='nav-links' onclick={closeMobileMenu}>
+                Home
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link to='/' className='nav-links' onclick={closeMobileMenu}>
+              Services
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link to='/' className='nav-links' onclick={closeMobileMenu}>
+              Products
+              </Link>
+              </li>
+              <li className='nav-item'>
+              <Link to='/sign-up' className='nav-links-mobile' onclick={closeMobileMenu}>
+              Sign Up
+              </Link>
+            </li> 
+          </ul>
+          {button && <Button buttonSyle='btn--outline'>SIGN UP</Button> }
         </div>
        </nav>
     </>
