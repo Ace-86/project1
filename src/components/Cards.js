@@ -21,12 +21,6 @@ function Cards() {
                 label='Random 2'
                 path='/services'
                 />
-                    <CardItem 
-                src='images/img-3.jpg'
-                text='random words until replaced'
-                label='Random 3'
-                path='/services'
-                />
             </ul>
             <ul className='cards__items'>
                 <CardItem 
