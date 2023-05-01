@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from './Button';
 import './Navbar.css';
@@ -18,6 +18,12 @@ function NavBar() {
       setButton(true);
     }
   };
+
+  //everytime refresh, sign up button will only show up once
+  useEffect(() => {
+    showButton()
+  }, []);
+
 // button changes when window is resized
   window.addEventListener('resize', showButton);
 
@@ -26,7 +32,7 @@ function NavBar() {
        <nav className='navbar'>
         <div className='navbar-container'>
           <Link to="/" className="navbar-logo" >
-            CHNGE <i className='fab fa typo3' />
+            CHNGE <i className='fab fa-typo3' onClick={closeMobileMenu}/>
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -34,17 +40,17 @@ function NavBar() {
           {/* on click navbar will dissapear */}
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
-              <Link to='/' className='nav-links' onclick={closeMobileMenu}>
+              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                 Home
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='/' className='nav-links' onclick={closeMobileMenu}>
+              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
               Services
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='/' className='nav-links' onclick={closeMobileMenu}>
+              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
               Products
               </Link>
               </li>
