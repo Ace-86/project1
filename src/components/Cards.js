@@ -15,6 +15,38 @@ function Cards() {
                 label='Random 1'
                 path='/services'
                 />
+                    <CardItem 
+                src='images/img-2.jpg'
+                text='random words until replaced'
+                label='Random 2'
+                path='/services'
+                />
+                    <CardItem 
+                src='images/img-3.jpg'
+                text='random words until replaced'
+                label='Random 3'
+                path='/services'
+                />
+            </ul>
+            <ul className='cards__items'>
+                <CardItem 
+                src='images/img-9.jpg'
+                text='random words until replaced'
+                label='Random 1'
+                path='/services'
+                />
+                    <CardItem 
+                src='images/img-2.jpg'
+                text='random words until replaced'
+                label='Random 2'
+                path='/services'
+                />
+                    <CardItem 
+                src='images/img-3.jpg'
+                text='random words until replaced'
+                label='Random 3'
+                path='/services'
+                />
             </ul>
         </div>
       </div>
