@@ -10,7 +10,7 @@ function CardItem(props) {
             <figure className='cards__item__pic-wrap' 
             data-category={props.label}>
                 <img src={props.src} 
-                alt='Random Image'
+                alt='Random '
                 className='cards__item__img' />
             </figure>
             <div className='cards__item__info'>
