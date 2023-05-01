@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from './Button';
-
+import './Navbar.css';
 
 function NavBar() {
   const [click, setClick] = useState(false);
@@ -10,6 +10,7 @@ function NavBar() {
   const handleClick = () => setClick(!click); 
   const closeMobileMenu = () => setClick(false);
 
+  // function that switches between button/ no button determined by screen size
   const showButton = () => {
     if(window.innerWidth <= 960) {
       setButton(false);
