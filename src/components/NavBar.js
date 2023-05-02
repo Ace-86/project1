@@ -32,7 +32,7 @@ function NavBar() {
        <nav className='navbar'>
         <div className='navbar-container'>
           <Link to="/" className="navbar-logo" >
-            CHNGE <i className='fab fa-typo3' onClick={closeMobileMenu}/>
+            ACE <i className='fab fa-typo3' onClick={closeMobileMenu}/>
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
